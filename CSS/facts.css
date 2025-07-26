@@ -1,4 +1,3 @@
-/* Victoria's CSS - Can remove this line */
 main {
     background-color: #fce5bf;
     padding: 20px;
@@ -14,6 +13,7 @@ h1 {
     color: #000000;
     font-size: 40px;
     margin-bottom: 20px;
+    font-family: Verdana, sans-serif;
 }
 
 #facts-container {
@@ -23,7 +23,17 @@ h1 {
     border: 2px solid #ffb300;
     border-radius: 5px;
     font-size: 18px;
+    text-align: center;
     color: #000000;
+    box-shadow: 0 2px 5px #000000;
+}
+
+#facts-container img {
+    max-width: 100%;
+    height: auto;
+    margin: 20px 0;
+    border-radius: 5px;
+    display: inline-block;
     box-shadow: 0 2px 5px #000000;
 }
 
