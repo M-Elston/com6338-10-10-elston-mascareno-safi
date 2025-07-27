@@ -1,1 +1,69 @@
-/* My CSS */
+/* Matt's CSS */
+
+body {
+    font-family: Verdana;
+    background-color: white;
+    color: black;
+}
+
+.hero {
+    width: 100%;
+    min-height: 400px;
+    overflow: hidden;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    position: relative;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-shadow: 1px 1px 4px rgba(0,0,0,0.7);
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+
+.container {
+    display: flex;
+    gap: 20px;
+    max-width: 900px;
+    margin: 10px auto;
+    align-items: flex-start;
+}
+
+.card {
+    background-color: bisque;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    box-sizing: border-box;
+    overflow: visible;
+}
+
+.text-card {
+    flex: 1;
+    text-align: left;
+}
+
+.image-card {
+    flex-shrink: 0;
+    width: auto;
+}
+
+.image-card img {
+    display: block;
+    height: 350px;
+    width: auto;
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.4);
+    border-radius: 8px;
+}
+
+h1 {
+    color: brown;
+}
+
+p {
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
