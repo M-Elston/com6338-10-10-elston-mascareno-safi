@@ -65,7 +65,11 @@ button#facts-button:hover {
 .facts-main a:hover {
     color: #551A8B;
 }
-
+@media (max-width: 768px) {
+    .facts-main {
+        margin: 20px 10px;
+    }
+}
 /* Shared Navbar styles for the project */
 
 .logo {
