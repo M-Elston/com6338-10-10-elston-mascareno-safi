@@ -1,6 +1,6 @@
 /* Facts Page CSS Styles */
 
-main {
+.facts-main {
     background-color: #fce5bf;
     padding: 20px;
     border-radius: 8px;
@@ -15,7 +15,7 @@ main {
     min-height: 100vh;
 }
 
-h1 {
+.facts-main h1 {
     color: #000000;
     font-size: 40px;
     margin-bottom: 20px;
@@ -56,6 +56,14 @@ button#facts-button {
 button#facts-button:hover {
     background-color: #ffb300;
     color: #000000;
+}
+.facts-main a {
+    color: #0000EE;
+    text-decoration: underline;
+    font-weight: bold;
+}
+.facts-main a:hover {
+    color: #551A8B;
 }
 
 /* Shared Navbar styles for the project */
