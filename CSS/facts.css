@@ -1,5 +1,8 @@
 
 /* Facts Page CSS Styles */
+/* This file contains styles specific to the facts page of the project.
+Some sections are labeled "shared" in case group members need them elsewhere. 
+However, the shared styles are used on the facts page. Please do not remove them!*/
 
 .facts-main {
     background-color: #fce5bf;
@@ -71,7 +74,7 @@ button#facts-button:hover {
         margin: 20px 10px;
     }
 }
-/* Shared Navbar styles for the project */
+/* Shared Navbar styles for the project if needed*/
 
 .logo {
     width: auto;
@@ -110,7 +113,7 @@ nav {
     border-radius: 4px;
 }
 
-/* Shared hamburger button for the project */
+/* Shared hamburger button for the project if needed*/
 .hamburger-btn {
     display: none;
     background: none;
@@ -119,14 +122,15 @@ nav {
     font-size: 25px;
 }
 
-/* Shared responsive styles for the project */
+/* Shared responsive styles for the project if needed */
 @media (max-width: 768px) {
     main {
         margin: 20px 10px;
     }
     .hamburger-btn {
         display: block;
-        margin: 0 auto;
+        margin-left: auto;
+        margin-right: 0;
     }
     .nav-links {
         display: none;
@@ -151,7 +155,7 @@ nav {
     }
 }
 
-/* Shared footer style for the project */
+/* Shared footer style for the project if needed */
 footer {
     background-color: #ffffff;
     color: #000000;

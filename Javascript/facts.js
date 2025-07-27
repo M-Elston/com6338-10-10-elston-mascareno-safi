@@ -1,3 +1,5 @@
+//This is the JavaScript for generating a random dog image only on the facts page
+
 const factsButton = document.getElementById('facts-button');
 const factsContainer = document.getElementById('facts-container');
 
@@ -12,19 +14,24 @@ factsButton.addEventListener('click', function () {
       factsContainer.innerHTML = `<img src="${imageURL}" alt="Cute dog photo" />`;
     })
     .catch(function () {
-      factsContainer.textContent = 'Oops! Could not fetch a dog image.';
+      factsContainer.textContent = 'Woof! Could not fetch a dog image.';
     });
 });
 
 
 
-// Shared hamburger menu responsiveness for all pages in the project
+// Shared hamburger menu responsiveness for all pages in the project if needed
+// This script only runs if both the hamburger button and nav links exist in your HTML
+// Please do not remove this code, it is required for the facts page to function correctly
+// If you need to use the hamburger menu on other pages, you can copy this code there
 
-var hamburgerBtn = document.querySelector('.hamburger-btn');
-var navLinks = document.querySelector('.nav-links');
+const hamburgerBtn = document.querySelector('.hamburger-btn');
+const navLinks = document.querySelector('.nav-links');
 
+if (hamburgerBtn && navLinks) {
 hamburgerBtn.addEventListener('click', function () {
-  var menuIsOpen = navLinks.classList.contains('show');
+  const menuIsOpen = navLinks.classList.contains('show');
   navLinks.classList.toggle('show');
   hamburgerBtn.setAttribute('aria-expanded', !menuIsOpen);
 });
+}
