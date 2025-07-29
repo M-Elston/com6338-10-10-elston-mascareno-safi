@@ -1,2 +1,51 @@
 /* Our CSS - Can remove this line */
 
+
+/* For Spacing - Allows Header/Footer at Top/Bottom Viewport */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+header h1 {
+    margin: 0;
+    padding: 0;
+}
+
+/* For HTML Body - Allows Sticky Footer */
+html, body {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    font-family: Verdana;
+    background-color: white;
+    color: black;
+}
+
+main {
+    flex: 1;
+}
+
+/* For Header */
+header {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    background-color: bisque;
+    padding: 20px;
+    text-align: center;
+    border-bottom: 1px solid #000;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.5);
+}
+
+
+/* For Site Footer */
+#site-footer {
+    text-align: center;
+    padding: 20px;
+    background-color: bisque;
+    color: black;
+    font-size: 1rem;
+    border-top: 1px solid #000;
+}
