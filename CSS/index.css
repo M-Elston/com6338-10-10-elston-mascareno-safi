@@ -1,4 +1,29 @@
-/* Matt's CSS */
+:root {
+    --font-base: 'Verdana', sans-serif;
+    --color-text: black;
+    --color-muted: grey;
+    --color-background: bisque;
+    --color-primary: #f4a261;
+    --color-primary-hover: #e76f51;
+    --color-overlay: rgba(0, 0, 0, 0.4);
+    --color-carousel-btn: rgba(255, 255, 255, 0.9);
+    --font-size-base: 1rem;
+    --font-size-lg: 1.2rem;
+    --font-size-xl: 2rem;
+    --font-size-hero-title: 3rem;
+    --font-size-hero-title-sm: 2rem;
+    --spacing-xs: 5px;
+    --spacing-sm: 10px;
+    --spacing-md: 20px;
+    --spacing-lg: 60px;
+    --spacing-xl: 100px;
+    --border-radius-sm: 4px;
+    --border-radius-md: 5px;
+    --border-radius-lg: 10px;
+    --transition-fast: 0.25s ease;
+    --transition-medium: 0.3s ease;
+    --transition-slow: 0.5s ease;
+}
 
 * {
     margin: 0;
@@ -7,10 +32,10 @@
 }
 
 body {
-    font: 'Verdana', sans-serif;
+    font: var(--font-base);
     line-height: 1.6;
-    color: black;
-    background-color: bisque;
+    color: var(--color-text);
+    background-color: var(--color-background);
 }
 
 .hero {
@@ -19,7 +44,7 @@ body {
     background-position: center;
     color: white;
     text-align: center;
-    padding: 100px 20px;
+    padding: var(--spacing-xl) var(--spacing-md);
     position: relative;
 }
 
@@ -28,7 +53,7 @@ body {
     position: absolute;
     top: 0; left: 0;
     width: 100%; height: 100%;
-    background: rgba(0, 0, 0, 0.4);
+    background: var(--color-overlay);
     z-index: 0;
 }
 
@@ -40,32 +65,32 @@ body {
 }
 
 .hero h1 {
-    font-size: 3rem;
-    margin-bottom: 10px;
+    font-size: var(--font-size-hero-title);
+    margin-bottom: var(--spacing-xs);
 }
 
 .hero p {
-    font-size: 1.2rem;
-    margin-bottom: 20px;
+    font-size: var(--font-size-lg);
+    margin-bottom: var(--spacing-sm);
 }
 
 .CTA {
-    margin-top: 20px;
+    margin-top: var(--spacing-sm);
 }
 
 .btn {
     display: inline-block;
     padding: 12px 24px;
-    background: #f4a261;
+    background: var(--color-primary);
     color: white;
     text-decoration: none;
-    border-radius: 5px;
-    margin: 5px;
-    transition: background-color 0.3s;
+    border-radius: var(--border-radius-md);
+    margin: var(--spacing-xs);
+    transition: background-color var(--transition-medium);
 }
 
 .btn:hover {
-    background: #e76f51;
+    background: var(--color-primary-hover);
 }
 
 .hero .quote {
@@ -78,14 +103,14 @@ body {
 }
 
 .info {
-    padding: 60px 20px;
+    padding: var(--spacing-lg) var(--spacing-md);
     background: white;
 }
 
 .info-container {
     display: flex;
     flex-wrap: wrap;
-    gap: 20px;
+    gap: var(--spacing-md);
     max-width: 1600px;
     margin: auto;
     align-items: flex-start;
@@ -97,7 +122,7 @@ body {
     flex: 1;
     max-width: 720px;
     aspect-ratio: 16 / 9;
-    border-radius: 10px;
+    border-radius: var(--border-radius-lg);
     overflow: hidden;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
 }
@@ -125,7 +150,7 @@ body {
     align-items: center;
     justify-content: center;
     background-color: white;
-    border-radius: 10px;
+    border-radius: var(--border-radius-lg);
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
 
 }
@@ -135,30 +160,30 @@ body {
     max-height: 80vh;
     width: auto;
     height: auto;
-    border-radius: 10px;
+    border-radius: var(--border-radius-lg);
     object-fit: cover;
-    transition: opacity 0.3s ease;
+    transition: opacity var(--transition-medium);
 }
 
 .carousel-buttons {
     position: absolute;
-    bottom: 10px;
+    bottom: var(--spacing-xs);
     left: 50%;
     transform: translateX(-50%);
 }
 
 .carousel-buttons button {
-    background-color: rgba(255, 255, 255, 0.9);
+    background-color: var(--color-carousel-btn);
     border: none;
     padding: 8px 14px;
-    border-radius: 6px;
+    border-radius: var(--border-radius-md);
     font-size: 1.2rem;
     cursor: pointer;
-    transition: background-color 0.5s ease;
+    transition: background-color var(--transition-slow);
 }
 
 .carousel-buttons button:hover {
-    background-color: #f4a261;
+    background-color: var(--color-primary);
     color: white;
 }
 
@@ -168,14 +193,14 @@ body {
 }
 
 .text-content h2 {
-    font-size: 2rem;
-    margin-bottom: 10px;
+    font-size: var(--font-size-xl);
+    margin-bottom: var(--spacing-xs);
 }
 
 .text-content ul {
     list-style: none;
     padding-left: 0;
-    margin: 15px 0;
+    margin: var(--spacing-sm) 0;
 }
 
 .text-content li {
@@ -183,40 +208,40 @@ body {
 }
 
 blockquote {
-    margin-top: 20px;
+    margin-top: var(--spacing-sm);
     font-style: italic;
-    color: grey;
-    border-left: 4px solid #f4a261;
-    padding-left: 10px;
+    color: var(--color-muted);
+    border-left: 4px solid var(--color-primary);
+    padding-left: var(--spacing-sm);
 }
 
 .imdb-link {
     text-decoration: none;
-    color: #f4a261;
+    color: var(--color-primary);
     display: inline-block;
-    transition: transform 0.25s ease; color 0.25s ease; border 0.25s ease;
+    transition: transform var(--transition-fast), color var(--transition-fast), border var(--transition-fast);
     border: 2px solid transparent;
-    border-radius: 4px;
+    border-radius: var(--border-radius-sm);
 }
 
 .imdb-link:hover {
-    background-color: #f4a261;
+    background-color: var(--color-primary);
     color: white;
-    border-color: #f4a261;
+    border-color: var(--color-primary);
     transform: scale(1.2);
 }
 
 #lifetime-message {
-    font-size: 1.1rem;
-    margin-top: 20px;
+    font-size: var(--font-size-lg);
+    margin-top: var(--spacing-sm);
     text-align: center;
-    color: #e76f51;
+    color: var(--color-primary-hover);
     font-style: italic;
 }
 
 @media (max-width: 1024px) {
     .hero h1 {
-        font-size: 2rem;
+        font-size: var(--font-size-hero-title-sm);
     }
 
     .info-container {

@@ -74,6 +74,7 @@ button#facts-button:hover {
         margin: 20px 10px;
     }
 }
+
 /* Shared Navbar styles for the project if needed*/
 
 .logo {
@@ -82,6 +83,7 @@ button#facts-button:hover {
     max-width: 100%;
 }
 
+/* Commented-Out due to Conflict with shared.css
 nav {
     background-color: #ffffff;
     padding: 10px 20px;
@@ -113,7 +115,6 @@ nav {
     border-radius: 4px;
 }
 
-/* Shared hamburger button for the project if needed*/
 .hamburger-btn {
     display: none;
     background: none;
@@ -121,12 +122,15 @@ nav {
     border: none;
     font-size: 25px;
 }
+End -Matt */
 
-/* Shared responsive styles for the project if needed */
+/* Commented-Out due to Conflict with shared.css
+    /* Shared responsive styles for the project if needed */
 @media (max-width: 768px) {
     main {
         margin: 20px 10px;
     }
+/* Commented-Out due to Conflict with shared.css
     .hamburger-btn {
         display: block;
         margin-left: auto;
@@ -153,9 +157,12 @@ nav {
         flex-direction: column;
         align-items: center;
     }
+End -Matt */
 }
 
 /* Shared footer style for the project if needed */
+
+/* Commented-Out due to Conflict with shared.css
 footer {
     background-color: #ffffff;
     color: #000000;
@@ -165,3 +172,4 @@ footer {
     bottom: 0;
     width: 100%;
 }
+End -Matt */
