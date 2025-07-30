@@ -31,6 +31,7 @@ factsButton.addEventListener('click', function () {
 // Please do not remove this code, it is required for the facts page to function correctly
 // If you need to use the hamburger menu on other pages, you can copy this code there
 
+/* Commented-Out due to Conflict with shared.css 
 const hamburgerBtn = document.querySelector('.hamburger-btn');
 const navLinks = document.querySelector('.nav-links');
 
@@ -41,3 +42,5 @@ hamburgerBtn.addEventListener('click', function () {
   hamburgerBtn.setAttribute('aria-expanded', !menuIsOpen);
 });
 }
+
+End -Matt */

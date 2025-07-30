@@ -4,13 +4,33 @@
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <title>Group Project, Module 10</title>
+<link href="https://fonts.googleapis.com/css2?family=Fredoka&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="CSS/shared.css" />
 <link rel="stylesheet" href="CSS/index.css" />
 <link rel="icon" href="data:,">
 </head>
 
 <body>
-    <header><h1>Furever Found: A Dog's Purpose</h1></header>
+    <header>
+        <nav class="navbar">
+            <div class="logo-container">
+            <a href="/index.html" class="logo-link">
+            <img src="/Assets/Images/NavBarDogLogo.png " alt="dog & paws logo" class="logo" />
+            </a>
+            </div>
+
+            <h1 class="site-title">Furever Found: A Dog's Purpose</h1>
+            
+            <button class="hamburger-btn" aria-label="Toggle navigation" aria-expanded="false">&#9776;</button>
+            
+            <ul class="nav-links">
+                <li><a href="/index.html">Home</a></li>
+                <li><a href="/Pages/facts.html">Dogs</a></li>
+                <li><a href="/Pages/adopt.html">Adopt</a></li>
+            </ul>
+        
+        </nav>
+    </header>
 
     <section class="hero">
         <div class="hero-content">
@@ -27,7 +47,7 @@
         <div class="info-container">
             <div class="info-carousel">
                 <div class="info-gallery">
-                    <img id="carousel-image" src="../Assets/Images/bailey1.jpg" alt="Bailey the golden retriever">
+                    <img id="carousel-image" src="/Assets/Images/bailey1.jpg" alt="Bailey the golden retriever">
                     <div class="carousel-buttons">
                         <button onclick="prevImage()"><</button>
                         <button onclick="nextImage()">></button>
@@ -61,6 +81,7 @@
     </section>
 
     <p id="lifetime-message"></p>
+    
     <footer id="site-footer"></footer>
 
 <script src="Javascript/shared.js" defer></script>

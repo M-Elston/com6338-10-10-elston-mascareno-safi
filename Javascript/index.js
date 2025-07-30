@@ -2,10 +2,10 @@
 
 // Carousel
 document.addEventListener("DOMContentLoaded", function () {
-const images = [
-        "../Assets/Images/bailey1.jpg",
-        "../Assets/Images/ellie.jpg",
-        "../Assets/Images/nose2nose.jpg",
+    const images = [
+        "/Assets/Images/bailey1.jpg",
+        "/Assets/Images/ellie.jpg",
+        "/Assets/Images/nose2nose.jpg",
     ];
 
     let currentImage = 0;
@@ -19,44 +19,46 @@ const images = [
             container.style.height = imgElement.height + 'px';
             container.style.width = imgElement.width + 'px';
         };
-    };
+    }
 
     function nextImage() {
         currentImage = (currentImage + 1) % images.length;
         showImage(currentImage);
         resetAutoRotate();
-    };
+    }
 
     function prevImage() {
         currentImage = (currentImage - 1 + images.length) % images.length;
         showImage(currentImage);
         resetAutoRotate();
-    };
+    }
 
     function startAutoRotate() {
         autoRotateInterval = setInterval(() => {
             currentImage = (currentImage + 1) % images.length;
             showImage(currentImage);
         }, 4000);
-    };
+    }
 
     function resetAutoRotate() {
         clearInterval(autoRotateInterval);
         startAutoRotate();
-    };
+    }
 
-    showImage(currentImage);
-    startAutoRotate();
+    if (imgElement) {
+        showImage(currentImage);
+        startAutoRotate();
+    }
 
     window.nextImage = nextImage;
     window.prevImage = prevImage;
-});
+
 
 // Visit Tracker
-document.addEventListener("DOMContentLoaded", function () {
     const messageEl = document.getElementById("lifetime-message");
-    let lifetimes = localStorage.getItem("lifetimes");
-
+    if (messageEl) {
+        let lifetimes = localStorage.getItem("lifetimes");
+        
     if (lifetimes === null) {
         lifetimes = 1;
     } else {
@@ -66,4 +68,5 @@ document.addEventListener("DOMContentLoaded", function () {
     localStorage.setItem("lifetimes", lifetimes);
 
     messageEl.textContent = `A visit is like a lifetime. You've visited ${lifetimes} time${lifetimes > 1 ? "s" : ""}`;
-})
+    }
+});

@@ -5,18 +5,45 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Group Project, Module 10</title>
-    <link rel="stylesheet" href="../CSS/shared.css" />
-    <link rel="stylesheet" href="../CSS/adopt.css" />
+    <!-- Added for Site Title Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka&display=swap" rel="stylesheet">
+    <!-- End -Matt -->
+    <link rel="stylesheet" href="/CSS/shared.css" />
+    <link rel="stylesheet" href="/CSS/adopt.css" />
   </head>
 
   <body>
+    <!-- Added for consistent site header -Matt -->
+    <header>
+        <nav class="navbar">
+            <div class="logo-container">
+            <a href="/index.html" class="logo-link">
+            <img src="/Assets/Images/NavBarDogLogo.png " alt="dog & paws logo" class="logo" />
+            </a>
+            </div>
+
+            <h1 class="site-title">Furever Found: A Dog's Purpose</h1>
+            
+            <button class="hamburger-btn" aria-label="Toggle navigation" aria-expanded="false">&#9776;</button>
+            
+            <ul class="nav-links">
+                <li><a href="/index.html">Home</a></li>
+                <li><a href="/Pages/facts.html">Dogs</a></li>
+                <li><a href="/Pages/adopt.html">Adopt</a></li>
+            </ul>
+        
+        </nav>
+    </header>
+
     <main>
-      <header>
+      <!-- Replaced "header" with "section" to correct conflict with shared.css -Matt -->
+      <section class="page-title">
         <h1>Adopt a Dog!</h1>
         <p>Give your future best friend a loving home!</p>
-      </header>
+      </section>
 
-      
+      <!-- Added missing section tag -Matt -->
+      <section>
         <h2>What to do when you adopt a dog</h2>
         <ul>
           <li>Visit the shelter or adoption center to meet the dog</li>
@@ -57,34 +84,32 @@
         </p>
       </section>
 
+      <!-- Removed nested section tags, collapsed into div, & corrected layout -Matt -->
       <section class="find-dog">
         <h2>Find Your Future Best Friend</h2>
-        <div>
-          <input
-            type="text"
-            id="location-input"
-            placeholder="Enter City, State, or Zip Code (e.g., 92054)"
-            aria-label="Location search input"
-          />
-          <button
-            id="search-button"
-          >
-            Search for Dogs
-          </button>
-        </div>
-        <section>
-            <h2>Dogs Ready for Adoption</h2>
-            <div id="petfinder-dogs">
-              <!-- Dog data will be loaded here by JavaScript -->
-              <p>Loading dogs...</p>
-            </div>
-          </section>
+        
+        <input
+          type="text"
+          id="location-input"
+          placeholder="Enter City, State, or Zip Code (e.g., 92054)"
+          aria-label="Location search input"
+        />
+
+        <button id="search-button">
+          Search for Dogs
+        </button>
+        
+        <h2>Dogs Ready for Adoption</h2>
+          <div id="petfinder-dogs">
+            <!-- Dog data will be loaded here by JavaScript -->
+            <p>Loading dogs...</p>
+          </div>
       </section>
     </main>
 
     <footer id="site-footer"></footer>
 
-    <script src="../Javascript/shared.js" defer></script>
-    <script src="../Javascript/adopt.js" defer></script>
+    <script src="/Javascript/shared.js" defer></script>
+    <script src="/Javascript/adopt.js" defer></script>
   </body>
 </html>
