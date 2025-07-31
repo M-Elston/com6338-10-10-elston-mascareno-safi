@@ -19,6 +19,10 @@ However, the shared styles are used on the facts page. Please do not remove them
     flex: 1;
 }
 
+.facts-main p {
+    margin-bottom: 20px;
+}
+
 .facts-main h1 {
     color: #000000;
     font-size: 40px;
