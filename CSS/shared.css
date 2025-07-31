@@ -10,6 +10,7 @@
     --color-border: black;
     --font-size-base: 1rem;
     --font-size-site-title: 3.5rem;
+    --logo-height: 75px;
     --spacing-xs: 4px;
     --spacing-sm: 8px;
     --spacing-md: 20px;
@@ -101,8 +102,6 @@ header {
     background: none;
     border: none;
     cursor: pointer;
-    position: absolute;
-    right: 10px;
 }
 
 /* For HTML Body - Allows Sticky Footer */
@@ -133,15 +132,40 @@ main {
 }
 
 @media (max-width: 1200px) {
-     .navbar {
-        grid-template-columns: 1fr auto;
+    :root {
+        --color-background: bisque;
+        --font-size-site-title: 1.8rem;
+        --spacing-sm: 8px;
+    }
+
+    .navbar {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
         grid-template-rows: auto auto;
+        align-items: center;
+    }
+
+    .site-title {
+        font-size: var(--font-size-site-title);
+    }
+
+    .logo {
+        height: var(--logo-height);
+        width: auto;
+    }
+
+    .logo-container {
+        grid-column: 1;
+        grid-row: 1;
+        justify-self: start;
     }
     
     .site-title {
         grid-column: 1 / -1;
+        grid-row: 2;
         justify-self: center;
-        margin: var(--spacing-sm) 0;
+        text-align: center;
+        margin-top: var(--spacing-sm);
     }
 
     .nav-links {
@@ -160,6 +184,7 @@ main {
     .hamburger-btn {
         display: block;
         grid-column: 2;
+        grid-row: 1;
         justify-self: end;
     }
 }
