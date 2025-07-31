@@ -1,2 +1,165 @@
-/* Our CSS - Can remove this line */
+/* For Global Styles */
+:root {
+    --font-primary: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    --font-secondary: 'Georgia', serif;
+    --font-site-title: 'Fredoka', sans-serif;
+    --color-primary: #f4a261;
+    --color-primary-hover: #e76f51;
+    --color-background: bisque;
+    --color-text: black;
+    -color-border: black;
+    --font-size-base: 1rem;
+    --font-size-site-title: 3.5rem;
+    --spacing-xs: 4px;
+    --spacing-sm: 8px;
+    --spacing-md: 20px;
+    --spacing-lg: 24px;
+    --spacing-xl: 75px;
+    --border-radius-sm: 4px;
+    --transition-fast: 0.25s ease;
+}
 
+/* For Spacing - Allows Header/Footer at Top/Bottom Viewport */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* For Header */
+header {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    background-color: var(--color-background);
+    padding: var(--spacing-md);
+    text-align: center;
+    border-bottom: 10px solid var(--color-primary-hover);
+    box-shadow: 0 2px 5px rgba(0,0,0,0.5);
+}
+
+.navbar {
+    display: grid;
+    grid-template-columns: auto 1fr auto;
+    align-items: center;
+    width: 100%;
+    margin: 0 auto;
+    position: relative;
+}
+
+.logo-container {
+    justify-self: start;
+}
+
+.logo {
+    height: var(--spacing-xl);
+    width: auto;
+}
+
+.site-title {
+    font-family: var(--font-site-title);
+    margin: 0;
+    justify-self: center;
+    font-size: var(--font-size-site-title);
+    font-weight: 600;
+}
+
+.nav-links {
+    display: flex;
+    gap: 20px;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    justify-self: end;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: var(--color-primary);
+    display: inline-block;
+    transition: transform var(--transition-fast), color var(--transition-fast), border var(--transition-fast);
+    border: 2px solid transparent;
+    border-radius: var(--border-radius-sm);
+}
+
+.nav-links a:hover {
+    background-color: var(--color-primary);
+    color: white;
+    border-color: var(--color-primary);
+    transform: scale(1.2);
+}
+
+.nav-links li a {
+    text-decoration: none;
+    color: var(--color-text);
+    font-weight: bold;    
+}
+
+.hamburger-btn {
+    display: none;
+    font-size: 24px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    position: absolute;
+    right: 10px;
+}
+
+/* For HTML Body - Allows Sticky Footer */
+html, body {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    font-family: var(--font-primary);
+    background-color: white;
+    color: var(--color-text);
+}
+
+main {
+    flex: 1;
+}
+
+/* For Site Footer */
+#site-footer {
+    text-align: center;
+    padding: var(--spacing-md);
+    background-color: var(--color-background);
+    color: var(--color-text);
+    font-size: var(--font-size-base);
+    border-top: 5px solid var(--color-primary-hover);
+    position: static;
+    bottom: auto;
+    width: 100%;
+}
+
+@media (max-width: 1200px) {
+     .navbar {
+        grid-template-columns: 1fr auto;
+        grid-template-rows: auto auto;
+    }
+    
+    .site-title {
+        grid-column: 1 / -1;
+        justify-self: center;
+        margin: var(--spacing-sm) 0;
+    }
+
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        background-color: var(--color-background);
+        padding: var(--spacing-sm) 0;
+        grid-column: 1 / -1;
+    }
+
+    .nav-links.show {
+        display: flex;
+    }
+
+    .hamburger-btn {
+        display: block;
+        grid-column: 2;
+        justify-self: end;
+    }
+}
