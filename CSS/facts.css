@@ -1,8 +1,5 @@
 
 /* Facts Page CSS Styles */
-/* This file contains styles specific to the facts page of the project.
-Some sections are labeled "shared" in case group members need them elsewhere. 
-However, the shared styles are used on the facts page. Please do not remove them!*/
 
 .facts-main {
     background-color: #fce5bf;
@@ -89,78 +86,9 @@ button#facts-button:hover {
     max-width: 100%;
 }
 
-/* Commented-Out due to Conflict with shared.css
-nav {
-    background-color: #ffffff;
-    padding: 10px 20px;
-    display: flex;
-    position: sticky;
-    top: 0;
-    z-index: 1000;
-    justify-content: space-between;
-    align-items: center;
-    box-shadow: 0 2px 5px #000000;
-}
 
-.nav-links {
-    list-style: none;
-    display: flex;
-    gap: 20px;
-}
-
-.nav-links li a {
-    font-size: large;
-    font-family: Verdana, sans-serif;
-    font-weight: bold;
-    color: #000000;
-    text-decoration: none;
-}
-
-.nav-links li a:hover {
-    color: #ffb300;
-    border-radius: 4px;
-}
-
-.hamburger-btn {
-    display: none;
-    background: none;
-    cursor: pointer;
-    border: none;
-    font-size: 25px;
-}
-End -Matt */
-
-/* Commented-Out due to Conflict with shared.css
-    /* Shared responsive styles for the project if needed */
 @media (max-width: 768px) {
     main {
         margin: 20px 10px;
     }
 }
-/* Commented-Out due to Conflict with shared.css
-    .hamburger-btn {
-        display: block;
-        margin-left: auto;
-        margin-right: 0;
-    }
-    .nav-links {
-        display: none;
-        flex-direction: column;
-        align-items: center;
-        margin-top: 10px;
-        background-color: #ffffff;
-        width: 100%;
-        padding: 10px 0;
-    }
-    .nav-links.show {
-        display: flex;
-    }
-    .nav-links li a {
-        padding: 10px 20px;
-        text-align: left;
-        width: 100%;
-    }
-    .nav-bar {
-        flex-direction: column;
-        align-items: center;
-    }
