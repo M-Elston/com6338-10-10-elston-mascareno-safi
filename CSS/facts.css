@@ -157,19 +157,3 @@ End -Matt */
         flex-direction: column;
         align-items: center;
     }
-End -Matt */
-}
-
-/* Shared footer style for the project if needed */
-
-/* Commented-Out due to Conflict with shared.css
-footer {
-    background-color: #ffffff;
-    color: #000000;
-    text-align: center;
-    padding: 10px 0;
-    position: fixed;
-    bottom: 0;
-    width: 100%;
-}
-End -Matt */
