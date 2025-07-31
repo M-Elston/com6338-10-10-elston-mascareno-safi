@@ -3,9 +3,9 @@
 // Carousel
 document.addEventListener("DOMContentLoaded", function () {
     const images = [
-        "../Assets/Images/bailey1.jpg",
-        "../Assets/Images/ellie.jpg",
-        "../Assets/Images/nose2nose.jpg",
+        "Assets/Images/bailey1.jpg",
+        "Assets/Images/ellie.jpg",
+        "Assets/Images/nose2nose.jpg",
     ];
 
     let currentImage = 0;
