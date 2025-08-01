@@ -87,23 +87,26 @@
       <!-- Removed nested section tags, collapsed into div, & corrected layout -Matt -->
       <section class="find-dog">
         <h2>Find Your Future Best Friend</h2>
-        
-        <input
-          type="text"
-          id="location-input"
-          placeholder="Enter City, State, or Zip Code (e.g., 92054)"
-          aria-label="Location search input"
-        />
-
-        <button id="search-button">
-          Search for Dogs
-        </button>
-        
-        <h2>Dogs Ready for Adoption</h2>
-          <div id="petfinder-dogs">
-            <!-- Dog data will be loaded here by JavaScript -->
-            <p>Loading dogs...</p>
-          </div>
+        <div>
+          <input
+            type="text"
+            id="location-input"
+            placeholder="Enter City, State, or Zip Code (e.g., 92054)"
+            aria-label="Location search input"
+          />
+          <button
+            id="search-button" onclick="searchForDog()"
+          >
+            Search for Dogs
+          </button>
+        </div>
+        <section>
+            <h2>Dogs Ready for Adoption</h2>
+            <div id="petfinder-dogs">
+              <!-- Dog data will be loaded here by JavaScript -->
+              <p>Loading dogs...</p>
+            </div>
+          </section>
       </section>
     </main>
 

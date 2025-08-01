@@ -29,7 +29,7 @@ async function getAccessToken() {
 async function fetchDogs() {
   try {
     const res = await fetch(
-      "https://api.petfinder.com/v2/animals?type=dog&limit=3",
+      `https://api.petfinder.com/v2/animals?location=${zipcode}`,
       {
         headers: {
           Authorization: `Bearer ${token}`,
@@ -88,5 +88,27 @@ function displayDogs(dogs) {
     container.appendChild(div);
   });
 }
+async function searchForDog() {
+  const input = document.getElementById("location-input");
+  const zipcode = input.value;
+  try {
+    const res = await fetch(
+      `https://api.petfinder.com/v2/animals?location=${zipcode}`,
+      {
+        headers: {
+          Authorization: `Bearer ${token}`,
+        },
+      }
+    );
 
+    if (!res.ok) {
+      throw new Error(`Failed to fetch dogs. Status: ${res.status}`);
+    }
+
+    const data = await res.json();
+    displayDogs(data.animals);
+  } catch (error) {
+    console.error("Error in fetchdogs:", error);
+  }
+}
 getAccessToken();
