@@ -4,22 +4,88 @@
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <title>Group Project, Module 10</title>
+<link href="https://fonts.googleapis.com/css2?family=Fredoka&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="CSS/shared.css" />
 <link rel="stylesheet" href="CSS/index.css" />
+<link rel="icon" href="data:,">
 </head>
 
 <body>
-    <header><h1>Temp HTML</h1></header>
+    <header>
+        <nav class="navbar">
+            <div class="logo-container">
+            <a href="index.html" class="logo-link">
+            <img src="Assets/Images/NavBarDogLogo.png " alt="dog & paws logo" class="logo" />
+            </a>
+            </div>
 
-    <main>
-        <h2>WIP</h2>
-        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dignissimos blanditiis esse, modi nostrum ad itaque officia ipsum officiis molestiae, labore magnam deserunt expedita, mollitia laudantium quos cupiditate? Quidem, odio beatae.</p>
-    <img src="Assets/Images/skinny-jeans-meme.jpg" alt="placeholder" height="300">
-    </main>
+            <h1 class="site-title">Furever Found: A Dog's Purpose</h1>
+            
+            <button class="hamburger-btn" aria-label="Toggle navigation" aria-expanded="false">&#9776;</button>
+            
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="Pages/facts.html">Dogs</a></li>
+                <li><a href="Pages/adopt.html">Adopt</a></li>
+            </ul>
+        
+        </nav>
+    </header>
 
-    <footer>&copy; 2025 Our Site</footer>
+    <section class="hero">
+        <div class="hero-content">
+            <h1><em>A Dog's Purpose</em> (2017)</h1>
+            <p>Discover reincarnation...through the eyes of a dog.</p>
+            <div class="CTA">
+                <a href="https://www.youtube.com/watch?v=1jLOOCADTGs" class="btn" target="_blank">Watch Trailer</a>
+            </div>
+        </div>
+        <p class="quote">"Heartwarming and uplifting." - Variety</p>
+    </section>
+
+    <section class="info">
+        <div class="info-container">
+            <div class="info-carousel">
+                <div class="info-gallery">
+                    <img id="carousel-image" src="Assets/Images/bailey1.jpg" alt="Bailey the golden retriever">
+                    <div class="carousel-buttons">
+                        <button onclick="prevImage()"><</button>
+                        <button onclick="nextImage()">></button>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="text-content">
+                <h2>About the Film</h2>
+                <p>"A dog discovers the meaning of its own existence through the lives of the humans it teaches to laugh and love. Reincarnated as multiple canines over the course of five decades, the lovable pooch develops an unbreakable bond with Ethan." - <a href="https://www.imdb.com/title/tt1753383/" target="_blank" rel="noopener noreferrer" class="imdb-link">IMDB</a></p>
+                <ul>
+                    <li><strong>Director:</strong> Lasse Hallström</li>
+                    <li><strong>Release:</strong> 2017</li>
+                    <li><strong>Runtime:</strong> 1h 40min</li>
+                    <li><strong>Genre:</strong> Family, Drama, Fantasy</li>
+                </ul>
+                <blockquote>"Every dog happens for a reason."</blockquote>
+            </div>
+
+            <div class="video-container">
+                <iframe
+                src="https://www.youtube.com/embed/1jLOOCADTGs?si=4vwcMt76UqCuM0fN"
+                title="YouTube video player"
+                frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                referrerpolicy="strict-origin-when-cross-origin"
+                allowfullscreen>
+                </iframe>
+            </div>
+        </div>
+    </section>
+
+    <p id="lifetime-message"></p>
+    
+    <footer id="site-footer"></footer>
 
 <script src="Javascript/shared.js" defer></script>
 <script src="Javascript/index.js" defer></script>
+
 </body>
 </html>
