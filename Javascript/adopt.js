@@ -44,7 +44,7 @@ async function fetchDogs() {
     const data = await res.json();
     displayDogs(data.animals);
   } catch (error) {
-    console.error("Error in fetchDogs:", error);
+      
     // Display error to user, e.g., "Could not load dog listings."
   }
 }
