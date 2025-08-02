@@ -29,7 +29,7 @@ async function getAccessToken() {
 async function fetchDogs() {
   try {
     const res = await fetch(
-      `https://api.petfinder.com/v2/animals?location=${zipcode}`,
+      `https://api.petfinder.com/v2/animals?type=dog&location=${zipcode}`,
       {
         headers: {
           Authorization: `Bearer ${token}`,
@@ -93,7 +93,7 @@ async function searchForDog() {
   const zipcode = input.value;
   try {
     const res = await fetch(
-      `https://api.petfinder.com/v2/animals?location=${zipcode}`,
+      `https://api.petfinder.com/v2/animals?type=dog&location=${zipcode}`,
       {
         headers: {
           Authorization: `Bearer ${token}`,
